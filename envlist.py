@@ -1,11 +1,8 @@
-
-
 #!/data/miniconda3/envs/env1/bin/python
 
 from filelock import FileLock
 import hickle
 import sys
-
 
 # set constants
 file_path = "/data/picasso/envlist.hkl"
@@ -50,7 +47,6 @@ with lock:
         clist = []
         for i in range (nenvs_int):
             clist.append(envprefix + str(i))
-        
     else:
         # load hickle file
         clist = hickle.load(file_path)
